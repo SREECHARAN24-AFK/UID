@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallpapers Hub</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #434343, #000000);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {         
+      background: url('https://i.pinimg.com/videos/thumbnails/originals/65/46/a1/6546a1186de51294de8d69b121d1ab3d.0000000.jpg') no-repeat center center/cover;
+      padding: 100px 20px;
+      position: relative;
+      animation: fadeSlideIn 1.5s ease-out forwards;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .header span {
+      position: relative;
+      z-index: 1;
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5em;
+      font-weight: 700;
+      color: #fefefe;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px;
+      opacity: 0;
+      animation: fadeSlideIn 2s ease-out forwards;
+      animation-delay: 1s;
+    }
+
+    .category {
+      background: linear-gradient(135deg, #8b0000, #000000); /* Dark red to black */
+      padding: 15px 25px;
+      margin: 15px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s, background 0.4s;
+      color: white;
+      font-weight: 500;
+    }
+
+    .category:hover {
+      transform: scale(1.15);
+      box-shadow: 0 10px 25px rgba(255, 0, 0, 0.4);
+      background: linear-gradient(135deg, #b30000, #1a1a1a); /* Brighter red to dark grey on hover */
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 30px;
+      opacity: 0;
+      animation: fadeSlideIn 2s ease-out forwards;
+      animation-delay: 2s;
+      flex: 1;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 1, 1, 1);
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+    }
+
+    footer {
+      background: #111;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: auto;
+    }
+
+    /* Animations */
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header"><span>Welcome to Wallpapers Hub</span></div>
+
+  <div class="categories">
+    <div class="category">Nature</div>
+    <div class="category">Abstract</div>
+    <div class="category">Technology</div>
+    <div class="category">Animals</div>
+    <div class="category">Space</div>
+    <div class="category">Anime</div>
+    <div class="category">Robotics</div>
+  </div>
+
+  <div class="gallery">
+    <img src="https://source.unsplash.com/250x250/?nature,wallpaper" alt="Nature Wallpaper">
+    <img src="https://source.unsplash.com/250x250/?abstract,wallpaper" alt="Abstract Wallpaper">
+    <img src="https://source.unsplash.com/250x250/?technology,wallpaper" alt="Technology Wallpaper">
+    <img src="https://source.unsplash.com/250x250/?animals,wallpaper" alt="Animals Wallpaper">
+    <img src="https://source.unsplash.com/250x250/?space,wallpaper" alt="Space Wallpaper">
+    <img src="https://source.unsplash.com/250x250/?Anime,wallpaper" alt="Anime Wallpaper">
+    <img src="https://source.unsplash.com/250x250/?Robotics,wallpaper" alt="Robotics Wallpaper">
+    <img src="wallpaperflare.com_wallpaper (5).jpg" alt="asdw">
+  </div>
+
+  <footer>
+    &copy; 2025 Wallpapers Hub. All rights reserved.
+  </footer>
+</body>
+</html>
